@@ -40,3 +40,6 @@ Timestamp: Sat Jun 03 2023 16:10:57 GMT-0400 (Eastern Daylight Time)
 URL: /favicon.ico
 Timestamp: Sat Jun 03 2023 16:10:57 GMT-0400 (Eastern Daylight Time)
 
+::1 - - [04/Jun/2023:19:58:55 +0000] "GET / HTTP/1.1" 200 21 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [04/Jun/2023:19:59:08 +0000] "GET /movies HTTP/1.1" 200 724 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+::1 - - [04/Jun/2023:20:00:04 +0000] "GET /documentation HTTP/1.1" 200 597 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
