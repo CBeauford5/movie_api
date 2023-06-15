@@ -12,7 +12,7 @@ const Movies = Models.Movie;
 const Users = Models.User;
 
 // mongoose.connect('mongodb://localhost:27017/myFlixDB', { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connect('mongodb+srv://treaves:BoCo2014@myflixdb.q8dhgrk.mongodb.net/myFlixDB?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('process.env.CONNECTION_URI', { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 const app = express();
@@ -45,10 +45,6 @@ const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), { 
 app.use(morgan('combined', { stream: accessLogStream }));
 
 app.use(express.static('public'));
-
-app.get('/', (req, res) => {
-  res.send('This is the default route endpoint');
-});
 
 //displaying a welcome message on the home page
 app.get('/', (req, res) => {
