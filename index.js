@@ -321,7 +321,7 @@ app.use((err, req, res, next) => {
 });
 
 //creating listener on port 80 and displaying a console message upon server startup 
-const port = process.env.PORT || 6671;
+const port = process.env.PORT || 8080;
 app.listen(port, '0.0.0.0', () => {
   console.log('Listening on Port ' + port);
 });
