@@ -46,7 +46,7 @@ app.use(morgan('combined', { stream: accessLogStream }));
 
 app.use(express.static('public'));
 
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
   res.send('This is the default route endpoint');
 });
 
