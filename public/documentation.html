@@ -119,9 +119,9 @@
 
       <tr>
         <td>Returns data about a single user</td>
-        <td>/users/:name</td>
+        <td>/users/:username</td>
         <td>GET</td>
-        <td>:name</td>
+        <td>:username</td>
         <td>-</td>
         <td>A JSON object holding data about a single user</td>
       </tr>
@@ -138,9 +138,9 @@
 
       <tr>
         <td>Allows users to add a movie to their favorites</td>
-        <td>/users/:name/movies/:movieID</td>
+        <td>/users/:username/movies/:movieID</td>
         <td>POST</td>
-        <td>:name, :movieID</td>
+        <td>:username, :movieID</td>
         <td>-</td>
         <td>A JSON object holding data about the updated user</td>
       </tr>
@@ -148,9 +148,9 @@
 
       <tr>
         <td>Allows users to update their user info</td>
-        <td>/users/:name</td>
+        <td>/users/:username</td>
         <td>PUT</td>
-        <td>:name</td>
+        <td>:username</td>
         <td>A JSON object holding data about the user that was updated, structured like: {"name": "Tom", "password": "1234",
           "email": "tom@gmail.com", "birthdate": "1983-10-08"}</td>
         <td>A JSON object holding data about the updated user</td>
@@ -159,18 +159,18 @@
 
       <tr>
         <td>Allows users to remove a movie from their favorites</td>
-        <td>/users/:name/movies/:movieID</td>
+        <td>/users/:username/movies/:movieID</td>
         <td>DELETE</td>
-        <td>:name, :movieID</td>
+        <td>:username, :movieID</td>
         <td>-</td>
         <td>A JSON object holding data about the updated user</td>
       </tr>
 
       <tr>
         <td>Allows users to deregister</td>
-        <td>/users/name</td>
+        <td>/users/:username</td>
         <td>DELETE</td>
-        <td>-</td>
+        <td>:username</td>
         <td>-</td>
         <td>A message confirming the user was deleted</td>
       </tr>
