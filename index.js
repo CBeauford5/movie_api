@@ -111,7 +111,7 @@ app.get('/movies/directorInfo/:director', passport.authenticate('jwt', { session
 });
 
 // diplaying movies by genre 
-app.get('/movies/genre/:genre', (req, res) => {
+app.get('/movies/genre/:genre', passport.authenticate('jwt', { session: false }), (req, res) => {
   Movies.find({ 'genre.name': req.params.genre })
     .then((movies) => {
       if (movies.length == 0) {
@@ -143,7 +143,7 @@ app.get('/movies/directors/:director', passport.authenticate('jwt', { session: f
 });
 
 // displaying a list of all users
-app.get('/users', passport.authenticate('jwt', { session: false }), (req, res) => {
+app.get('/users', (req, res) => {
   Users.find()
     .then((users) => {
       res.status(200).json(users);
@@ -155,7 +155,7 @@ app.get('/users', passport.authenticate('jwt', { session: false }), (req, res) =
 });
 
 // display a single user
-app.get('/users/:username', passport.authenticate('jwt', { session: false }), (req, res) => {
+app.get('/users/:username', (req, res) => {
   Users.findOne({ username: req.params.username })
     .then((user) => {
       if (!user) {
