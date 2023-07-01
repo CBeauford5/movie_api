@@ -143,7 +143,7 @@ app.get('/movies/directors/:director', passport.authenticate('jwt', { session: f
 });
 
 // displaying a list of all users
-app.get('/users', (req, res) => {
+app.get('/users', passport.authenticate('jwt', { session: false }), (req, res) => {
   Users.find()
     .then((users) => {
       res.status(200).json(users);
@@ -155,7 +155,7 @@ app.get('/users', (req, res) => {
 });
 
 // display a single user
-app.get('/users/:username', (req, res) => {
+app.get('/users/:username', passport.authenticate('jwt', { session: false }), (req, res) => {
   Users.findOne({ username: req.params.username })
     .then((user) => {
       if (!user) {
