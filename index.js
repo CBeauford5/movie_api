@@ -111,7 +111,7 @@ app.get('/movies/directorInfo/:director', passport.authenticate('jwt', { session
 });
 
 // diplaying movies by genre 
-app.get('/movies/genre/:genre', passport.authenticate('jwt', { session: false }), (req, res) => {
+app.get('/movies/genre/:genre', (req, res) => {
   Movies.find({ 'genre.name': req.params.genre })
     .then((movies) => {
       if (movies.length == 0) {
